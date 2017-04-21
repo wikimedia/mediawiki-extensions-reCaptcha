@@ -28,8 +28,8 @@ $RECYCLE.BIN/
 .AppleDouble
 .LSOverride
 
-# Icon must end with two \r
-Icon
+# Silly Mac file with a name containing a carriage return.
+Icon[]
 
 # Thumbnails
 ._*
