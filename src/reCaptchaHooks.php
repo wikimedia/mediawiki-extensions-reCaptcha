@@ -50,7 +50,7 @@ class reCaptchaHooks {
 	}
 
 	/**
-	 * @param $wikiPage
+	 * @param \WikiPage $wikiPage
 	 * @param \User $user
 	 * @param $content
 	 * @param $summary
@@ -62,7 +62,7 @@ class reCaptchaHooks {
 	 *
 	 * @return bool
 	 */
-	public function onPageContentSave( $wikiPage, $user, $content, $summary,
+	public function onPageContentSave( \WikiPage $wikiPage, $user, $content, $summary,
 		$isMinor, $isWatch, $section, $flags, $status )
 	{
 
