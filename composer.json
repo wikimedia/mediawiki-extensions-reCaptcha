@@ -3,7 +3,7 @@
 	"type": "mediawiki-extension",
 	"description": "Adds Google reCaptcha integration",
 	"homepage": "https://www.mediawiki.org/wiki/Extension:reCaptcha",
-	"license": "GPL-2.0+",
+	"license": "GPL-2.0-or-later",
 	"keywords": [
 		"captcha",
 		"reCaptcha",

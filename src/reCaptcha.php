@@ -23,7 +23,7 @@ class reCaptcha {
 			'version' => '0.1',
 			'url' => 'https://www.mediawiki.org/wiki/Extension:reCaptcha',
 			'descriptionmsg' => 'recaptcha-desc',
-			'license-name' => 'GPL-2.0+'
+			'license-name' => 'GPL-2.0-or-later'
 		);
 
 		//Configuration variables
