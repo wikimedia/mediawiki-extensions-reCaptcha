@@ -89,7 +89,7 @@ class reCaptchaHooks {
 		$wgOut->addHeadItem('recaptcha',"<script src='https://www.google.com/recaptcha/api.js' async defer></script>");
 
 		$html = "<div style='padding: 10px 0 10px 0;' class='recaptcha'>" .
-		        '<div class="g-recaptcha" data-sitekey="'.$wgReCaptchaKey.'"></div>' .
+		        '<div class="g-recaptcha" data-sitekey="' .htmlspecialchars( $wgReCaptchaKey ) .'"></div>' .
 		        "</div>";
 
 		return $html;
@@ -112,10 +112,11 @@ class reCaptchaHooks {
 		}
 
 		$result = file_get_contents(
-			'https://www.google.com/recaptcha/api/siteverify'
-			.'?secret='.$wgReCaptchaSecret
-			.'&response='.$response
-			.'&remoteip='.$_SERVER['REMOTE_ADDR']
+			'https://www.google.com/recaptcha/api/siteverify' . wfArrayToCgi( [
+				'secret' => $wgReCaptchaSecret,
+				'response' => $response,
+				'remoteip' => $_SERVER['REMOTE_ADDR']
+			] )
 		);
 
 		$result = json_decode($result, true);
